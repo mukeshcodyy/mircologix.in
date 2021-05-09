@@ -1,0 +1,318 @@
+@import 'variables.css';
+@import 'utilities.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -weblit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+}
+
+
+/* navbar section */
+
+header nav {
+    margin-top: 0rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--light);
+    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, .1);
+    position: fixed;
+    z-index: 12;
+}
+
+header nav .right-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftnav div {
+    color: var(--secondary);
+    opacity: 0;
+}
+
+header nav .leftnav a {
+    text-decoration: none;
+}
+
+header nav .leftnav a img {
+    width: 11rem;
+}
+
+header nav .right-nav .links div {
+    margin-top: 10px;
+    opacity: 0;
+}
+
+header nav .right-nav .links div li {
+    list-style: none;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+header nav .right-nav .links div li ul a {
+    margin-top: 10px;
+}
+
+header nav .right-nav .links div li .products,
+header nav .right-nav .links div li .about {
+    display: none;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+
+header nav .right-nav .links div li a,
+header nav .right-nav .links div li a {
+    cursor: pointer;
+}
+
+header nav .right-nav .links li .products ul,
+header nav .right-nav .links li .about ul {
+    margin-top: 10px;
+    padding: 0px 50px;
+}
+
+header nav .right-nav .links li .products ul a,
+header nav .right-nav .links li .about ul a {
+    top: 10px;
+    left: 0px;
+    font-size: .9rem;
+}
+
+header nav .right-nav .links li .products ul a:hover,
+header nav .right-nav .links li .about ul a:hover {
+    font-size: 1.1rem;
+    transition: all .2s ease-in-out;
+}
+
+header nav .right-nav .links div li:hover .products,
+header nav .right-nav .links div li:hover .about {
+    background: var(--light);
+    top: 10px;
+    transition: all .2s ease-in-out;
+    right: 30px;
+    height: 190px;
+    position: absolute;
+    box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, .1);
+    width: 200px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+header nav .right-nav .links {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+}
+
+header nav .right-nav .links a {
+    margin-right: 100px;
+    text-decoration: none;
+    font-weight: 900;
+    position: relative;
+    color: #9CB4BD;
+    transition: all .2s ease-in-out;
+    z-index: 0;
+}
+
+@keyframes navbar {
+    from {
+        transform: translateY(-400%);
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+header nav .right-nav .download a {
+    font-weight: 900;
+    text-decoration: none;
+    position: relative;
+    color: #9CB4BD;
+    transition: all .2s ease-in-out;
+}
+
+header nav .right-nav .download div {
+    opacity: 0;
+}
+
+header nav .right-nav .download {
+    margin-left: 200px;
+}
+
+header nav .right-nav .links a::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--dark);
+    transition: width .2s ease-in-out;
+}
+
+header nav .right-nav .links a:hover:after {
+    width: 80%;
+}
+
+header nav .right-nav .links a:hover {
+    color: #333040;
+    font-size: 17px;
+}
+
+
+/* whymts section */
+
+section.wmts {
+    margin-top: 4rem;
+    padding: .5rem 5rem 2rem 9rem;
+}
+
+.photo {
+    background-image: url(../img/1\ \(3\).jpg);
+    background-color: rgba(45, 106, 197, .9);
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+section.wmts .card {
+    margin-top: 2rem;
+    border: 2px solid rebeccapurple;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 0 2rem 0 2rem;
+    border-bottom: 5px solid var(--primary);
+    height: 100px;
+}
+
+section.wmts p {
+    padding: 0 5rem 0 0rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+
+section.wmts h3 {
+    margin-top: 1rem;
+}
+
+
+/* footer section */
+
+.footerhead {
+    margin-top: 4rem;
+    background-color: var(--light1);
+}
+
+section .footerh {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+section .footerh .pages ul li {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+section .footerh .pages ul li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .ooa p {
+    margin-top: 1rem;
+    padding: 0 4rem 1rem 0;
+}
+
+section .footerh .send .fuogm {
+    margin-top: 1.5rem;
+}
+
+section .footerh .send .fuogm li {
+    margin-top: .7rem;
+    list-style: none;
+}
+
+section .footerh .send .fuogm li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .cve {
+    margin-top: 1.5rem;
+}
+
+section .footerh .send .cve li {
+    margin-top: .7rem;
+    list-style: none;
+}
+
+section .footerh .send .cve li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .cve li:hover a,
+section .footerh .send .fuogm li:hover a,
+section .footerh .pages ul li:hover a {
+    color: var(--light);
+}
+
+a section .footerh .pimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+section .footerh .pimg img {
+    margin-left: 80px;
+    overflow: hidden;
+    width: 250px;
+    height: 300px;
+}
+
+
+/* footer */
+
+footer .copyright {
+    background-color: var(--dark);
+    text-align: center;
+}
+
+footer .copyright li {
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer .copyright li span {
+    color: var(--light);
+}
+
+footer .copyright li span a {
+    text-decoration: none;
+    color: var(--button);
+}
+
+footer .copyright li span a:hover {
+    color: var(--light1);
+}

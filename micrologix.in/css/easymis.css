@@ -1,0 +1,399 @@
+@import 'variables.css';
+@import 'utilities.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -weblit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+}
+
+
+/* navbar section */
+
+header nav {
+    margin-top: -3.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--light);
+    box-shadow: 0px 4px 15px 5px rgba(0, 0, 0, .1);
+    position: fixed;
+    z-index: 12;
+}
+
+header nav .right-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftnav div {
+    color: var(--secondary);
+    opacity: 0;
+}
+
+header nav .leftnav a {
+    text-decoration: none;
+}
+
+header nav .leftnav a img {
+    width: 11rem;
+}
+
+header nav .right-nav .links div {
+    margin-top: 10px;
+    opacity: 0;
+}
+
+header nav .right-nav .links div li {
+    list-style: none;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+header nav .right-nav .links div li ul a {
+    margin-top: 10px;
+}
+
+header nav .right-nav .links div li .products,
+header nav .right-nav .links div li .about {
+    display: none;
+    position: absolute;
+    transition: all .3s ease-in-out;
+}
+
+header nav .right-nav .links div li a,
+header nav .right-nav .links div li a {
+    cursor: pointer;
+}
+
+header nav .right-nav .links li .products ul,
+header nav .right-nav .links li .about ul {
+    margin-top: 10px;
+    padding: 0px 50px;
+}
+
+header nav .right-nav .links li .products ul a,
+header nav .right-nav .links li .about ul a {
+    top: 10px;
+    left: 0px;
+    font-size: .9rem;
+}
+
+header nav .right-nav .links li .products ul a:hover,
+header nav .right-nav .links li .about ul a:hover {
+    font-size: 1.1rem;
+    transition: all .2s ease-in-out;
+}
+
+header nav .right-nav .links div li:hover .products,
+header nav .right-nav .links div li:hover .about {
+    background: var(--light);
+    top: 10px;
+    transition: all .2s ease-in-out;
+    right: 30px;
+    height: 190px;
+    position: absolute;
+    box-shadow: 4px 4px 15px 5px rgba(0, 0, 0, .1);
+    width: 200px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+header nav .right-nav .links {
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+}
+
+header nav .right-nav .links a {
+    margin-right: 100px;
+    text-decoration: none;
+    font-weight: 900;
+    position: relative;
+    color: #9CB4BD;
+    transition: all .2s ease-in-out;
+    z-index: 0;
+}
+
+@keyframes navbar {
+    from {
+        transform: translateY(-400%);
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+header nav .right-nav .download a {
+    font-weight: 900;
+    text-decoration: none;
+    position: relative;
+    color: #9CB4BD;
+    transition: all .2s ease-in-out;
+}
+
+header nav .right-nav .download div {
+    opacity: 0;
+}
+
+header nav .right-nav .download {
+    margin-left: 200px;
+}
+
+header nav .right-nav .links a::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--dark);
+    transition: width .2s ease-in-out;
+}
+
+header nav .right-nav .links a:hover:after {
+    width: 80%;
+}
+
+header nav .right-nav .links a:hover {
+    color: #333040;
+    font-size: 17px;
+}
+
+
+/* munimji section */
+
+section.munimji .slide {
+    width: 100%;
+    height: 500px;
+    margin-top: 3.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url(../img/f1\ \(5\).jpg);
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+
+/* position: absolute; */
+
+.munimjiphoto {
+    background-image: url(../img/alex-knight-2EJCSULRwC8-unsplash.jpg);
+    margin-top: 5rem;
+    margin-left: 20rem;
+    width: 200px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .6s ease-in-out;
+}
+
+.munimjiphoto:hover {
+    transform: translateY(-10px) scale(1.1);
+}
+
+section.munimji .slide .introduction {
+    margin-top: 3rem;
+    padding: 0 5rem 0 5rem;
+    margin-left: -15rem;
+    text-align: center;
+}
+
+section.munimji .slide .introduction h1 {
+    font-size: 3rem;
+    color: var(--light);
+}
+
+section.munimji .slide .introduction p {
+    padding: 0 8rem 0 8rem;
+    color: var(--light);
+    margin-top: 2rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+section.munimji .slide .introduction h4 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    color: var(--light);
+}
+
+section.munimji .munimjimain {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+section.munimji .munimjimain .munimjiintro {
+    margin-top: 1rem;
+    padding: 0 10rem 0 10rem;
+}
+
+section.munimji .munimjimain .munimjiintro p {
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+section.munimji .munimjimain .munimjiintro button {
+    margin-top: 2rem;
+}
+
+section.munimji .munimjimain .munimjiintro button li {
+    list-style: none;
+}
+
+section.munimji .munimjimain .munimjiintro button li i {
+    padding-right: 1rem;
+}
+
+section.munimji .munimjimain .munimjiintro button li a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: all .6s ease-in-out;
+}
+
+section.munimji .munimjimain .munimjiintro button:hover li a {
+    color: var(--light);
+}
+
+section.munimji .munimjimain .progress {
+    margin-top: 10rem;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section.munimji .edit {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+section.munimji .edit .card .box p {
+    padding: 0 5rem 0 5rem;
+}
+
+
+/* footer section */
+
+.footerhead {
+    margin-top: 4rem;
+    background-color: var(--light1);
+}
+
+section .footerh {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+section .footerh .pages ul li {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+section .footerh .pages ul li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .ooa p {
+    margin-top: 1rem;
+    padding: 0 4rem 1rem 0;
+}
+
+section .footerh .send .fuogm {
+    margin-top: 1.5rem;
+}
+
+section .footerh .send .fuogm li {
+    margin-top: .7rem;
+    list-style: none;
+}
+
+section .footerh .send .fuogm li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .cve {
+    margin-top: 1.5rem;
+}
+
+section .footerh .send .cve li {
+    margin-top: .7rem;
+    list-style: none;
+}
+
+section .footerh .send .cve li a {
+    text-decoration: none;
+    transition: all .2s ease-in;
+}
+
+section .footerh .send .cve li:hover a,
+section .footerh .send .fuogm li:hover a,
+section .footerh .pages ul li:hover a {
+    color: var(--light);
+}
+
+a section .footerh .pimg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+section .footerh .pimg img {
+    margin-left: 80px;
+    overflow: hidden;
+    width: 250px;
+    height: 300px;
+}
+
+
+/* footer */
+
+footer .copyright {
+    background-color: var(--dark);
+    text-align: center;
+}
+
+footer .copyright li {
+    list-style: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer .copyright li span {
+    color: var(--light);
+}
+
+footer .copyright li span a {
+    text-decoration: none;
+    color: var(--button);
+}
+
+footer .copyright li span a:hover {
+    color: var(--light1);
+}
